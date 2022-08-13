@@ -1,0 +1,21 @@
+<table>
+    <thead>
+        <tr>
+            <th class="th">Product Image</th>
+            <th class="th">Product Name</th>
+            <th class="th">Product Quantity</th>
+            <th class="th">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of products;index as i">
+            <td class="td">{{ product.pImage.name }}</td>
+            <td class="td">{{ product.pName }}</td>
+            <td class="td">{{ product.pQuantity }}</td>
+            <td class="td">
+                <input class="btn btn-1" type="button" value="View" (click)="viewProduct(i)"><br>
+                <input class="btn btn-2" type="button" value="Delete">
+            </td>
+        </tr>
+    </tbody>
+</table>
